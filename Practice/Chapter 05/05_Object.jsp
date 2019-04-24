@@ -53,21 +53,44 @@ var queues = new Array();
 queues.push("pink");
 queues.push("black");
 queues.push("gold");
-alert(queues.shift()); // pink
-alert(queues);
+//alert(queues.shift()); // pink
+//alert(queues);
 
 /* Queue에서 unshift() 이용 */
 var queueColors = new Array();
 queueColors.unshift("red", "green"); 
-alert(queueColors); // red,green
+//alert(queueColors); // red,green
 
 queueColors.push("black"); 
-alert(queueColors); // red,green,black
+//alert(queueColors); // red,green,black
 
 queueColors.unshift("yellow", "purple"); 
-alert(queueColors); // yellow,purple,red,green,black
+//alert(queueColors); // yellow,purple,red,green,black
 
-alert(queueColors.pop()); // black
+//alert(queueColors.pop()); // black
+</script>
+<script>
+/* concat() */
+//var colors = ["red", "green", "yellow"];
+//var colors2 = colors.concat("blue", ["black", "brown"]);
+//alert(colors);
+//alert(colors2);
+
+/* splice() */
+var colors = ["red", "green", "yellow", "black", "gold"];
+
+var colors2 = colors.splice(1); 
+// color2에는 red를 제외한 green,yellow, black, gold가 할당, colors에는 red 할당
+
+var colors3 = colors.slice(1,4);
+// colors3에는 colors의 인덱스 1부터 3까지가 할당되는데 현재 colors에는 red 단 한개만 존재하기 때문에 아무 값도 들어가지지 않는다.
+// colors에는 red가 그대로 존재
+
+alert(colors); // red
+alert(colors2); // green,yellow,black,gold
+alert(colors3); // 빈 문자열
+</script>
+<script>
 </script>
 </body>
 </html>
